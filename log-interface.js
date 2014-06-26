@@ -17,7 +17,7 @@ module.exports = function(items) {
     scrollable: true,
     label: ' Logs ',
     width:  col_width*2 + '%',
-    height: '95%',
+    height: '98%',
     left: 0,
     top: 0,
     border: {
@@ -108,7 +108,7 @@ module.exports = function(items) {
      type: 'line'
     },
     width: col_width+'%',
-    height: '32%',
+    height: '31%',
     right: 0,
     top: '65%',
   })
@@ -116,7 +116,6 @@ module.exports = function(items) {
   var helper = blessed.box({
     parent: screen,
     content: ' q: quit | right-left: change focus | up-down: scroll | p: pause/play logs',
-    label : ' Help ',
     height: 3,
     width: '100%',
     left: 0,
