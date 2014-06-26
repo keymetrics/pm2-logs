@@ -1,2 +1,3 @@
-//@todo add options format
-require('../').init()
+require('../').init({
+  format: 'MMMM Do YYYY, h:mm:ss a'
+})
