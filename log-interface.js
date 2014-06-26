@@ -69,7 +69,6 @@ module.exports = function(items) {
         // },
       },
       selected: {
-        fg: 'black',
         bold: true,
         inverse: true
       }
