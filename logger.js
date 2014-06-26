@@ -56,6 +56,11 @@ var logger = {
       this.watch(this.processes[env.pm_id].item)
     }
 
+    this.err(
+      chalk.bold(this.processes[env.pm_id].item) +
+      ' ' + chalk.green(env.status)
+    )
+
     this.reloadSidebar()
 
     return this
@@ -64,11 +69,19 @@ var logger = {
    * Removes a process from processes list
    * @param  {int} id    pm_id
    */
-  remove: function(id) {
+  remove: function(env) {
+    var id = env.pm_id
+
     //...
     if(!this.processes[id]) {
       return this;
     }
+
+    //logging process status
+    this.err(
+      chalk.bold(this.processes[id].item) +
+      ' ' + chalk.red(env.status)
+    )
 
     var items = this.getItems(), update = false
 
@@ -329,21 +342,10 @@ var logger = {
 
     ipm2.bus.on('process:online', function(d) {
       self.add(d.process.pm2_env)
-
-      self.err(
-        chalk.bold(self.processes[d.process.pm2_env.pm_id].item) +
-        ' ' + chalk.green(d.process.pm2_env.status)
-      )
     })
 
     ipm2.bus.on('process:exit', function(d) {
-
-      self.err(
-        chalk.bold(self.processes[d.process.pm2_env.pm_id].item) +
-        ' ' + chalk.red(d.process.pm2_env.status)
-      )
-
-      self.remove(d.process.pm2_env.pm_id)
+      self.remove(d.process.pm2_env)
     })
 
     ipm2.bus.on('log:out', function(d){
