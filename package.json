@@ -1,13 +1,13 @@
 {
   "name": "pm2-logs",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Pm2 cli logs interface",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cat README.md | tail -n 5"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "soyuka",
+  "license": "MIT",
   "dependencies": {
     "json-stringify-safe": "^5.0.0",
     "pm2-interface": "~0.1.3",
