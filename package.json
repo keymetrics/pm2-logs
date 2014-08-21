@@ -1,6 +1,6 @@
 {
   "name": "pm2-logs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pm2 cli logs interface",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,5 @@
     "blessed": "0.0.36",
     "moment": "^2.7.0"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
