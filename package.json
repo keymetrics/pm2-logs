@@ -8,6 +8,10 @@
   },
   "author": "soyuka",
   "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/keymetrics/pm2-logs.git"
+  },
   "dependencies": {
     "json-stringify-safe": "^5.0.0",
     "pm2-interface": "~1.1.0",
